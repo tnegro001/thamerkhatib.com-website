@@ -3,6 +3,9 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+// import { Image } from 'astro:assets';
+import { Image } from 'astro:assets';
+import ThamerImage from '../assets/Thamer_Picture.jpg';
 ---
 
 
@@ -14,7 +17,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<body>
 		<Header />
 		<main>
-			<h1><img src='/public/assets/Thamer_Picture.jpg' alt="Thamer Picture" width="200" height="auto"  /></h1>
+			<Image src={ThamerImage} alt="Thamer Picture" width="300" height="300" />
+
 			<h1>Thamer Khatib</h1>
 			<p>Hello! I am an Electrical Engineer with experience in Energy Market Analysis, specializing in Power Systems for Offshore Renewable Energy.</p>
 			
