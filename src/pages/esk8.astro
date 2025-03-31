@@ -1,0 +1,53 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { Image } from 'astro:assets';
+import Esk8Image1 from '../assets/esk8_1.jpg';
+import Esk8Image2 from '../assets/esk8_2.jpg';
+import Esk8Image3 from '../assets/esk8_3.jpg';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title="Electric Skateboard Project" description="A high-performance DIY electric skateboard project by Thamer Khatib." />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Electric Skateboard Project</h1>
+			<p>Building a high-performance electric skateboard for urban commuting and high-speed rides.</p>
+
+			<section>
+				<h2>Project Overview</h2>
+				<p>Inspired by the need for efficient and fun transportation, I designed and built an electric skateboard with a focus on speed, range, and reliability.</p>
+			</section>
+
+			<section>
+				<h2>Technical Details</h2>
+				<ul>
+					<li><strong>Battery:</strong> 12S4P Lithium-ion pack (Samsung 30Q cells)</li>
+					<li><strong>Motor:</strong> Dual 6374 190KV Brushless Motors</li>
+					<li><strong>ESC:</strong> VESC-based speed controller</li>
+					<li><strong>Top Speed:</strong> ~50 km/h</li>
+					<li><strong>Range:</strong> ~30 km per charge</li>
+					<li><strong>Deck & Enclosure:</strong> Custom fiberglass and carbon fiber</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Gallery</h2>
+				<Image src={Esk8Image1} alt="Esk8 Build Process" width="400" height="300" />
+				<Image src={Esk8Image2} alt="Completed Esk8" width="400" height="300" />
+				<Image src={Esk8Image3} alt="Riding the Esk8" width="400" height="300" />
+			</section>
+
+			<section>
+				<h2>Lessons Learned</h2>
+				<p>Throughout the project, I gained hands-on experience with battery management, motor control, and mechanical design. Iterations on ESC tuning and enclosure material were crucial for performance.</p>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
